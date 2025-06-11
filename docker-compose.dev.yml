@@ -5,6 +5,8 @@ services:
       dockerfile: ./api/Dockerfile
       args:
         NODE_VERSION: 22.13.0
+    environment:
+      - BASE_URL=${BASE_URL:-localhost}
     ports:
       - "3000:3000"
       - "9223:9223"

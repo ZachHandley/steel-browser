@@ -97,3 +97,4 @@ ENV HOST_IP=localhost \
 ENTRYPOINT ["/app/api/entrypoint.sh"]
 
 COPY --from=build /app /app
+RUN chmod +x /app/api/entrypoint.sh
